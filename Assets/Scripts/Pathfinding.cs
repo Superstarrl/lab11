@@ -112,6 +112,7 @@ public class Pathfinding : MonoBehaviour
             }
         }
 
+        path.Clear();
         if (!cameFrom.ContainsKey(goal))
         {
             Debug.Log("Path not found.");
@@ -129,7 +130,11 @@ public class Pathfinding : MonoBehaviour
         path.Reverse();
     }
 
-    public void AddObstacle(Vector2Int position) => grid[position.y, position.x] = 1;
+    public void AddObstacle(Vector2Int position)
+    {
+        grid[position.y, position.x] = 1;
+        FindPath(start, goal);
+    }
 
     //for probability: 1 -> 100% chance, 0.5 -> 50% chance, 0 -> 0% chance
     void GenerateRandomGrid(int width, int height, float obstacleProbability)

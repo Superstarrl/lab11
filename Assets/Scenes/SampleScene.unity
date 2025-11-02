@@ -437,6 +437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 828878660}
   - component: {fileID: 828878659}
+  - component: {fileID: 828878661}
   m_Layer: 0
   m_Name: Pathfinding
   m_TagString: Untagged
@@ -456,11 +457,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaa18a349d721594cbe759e87ca354d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pathfinding
-  start: {x: 0, y: 1}
-  goal: {x: 6, y: 6}
-  width: 7
-  height: 7
-  obstacleProbability: 0.3
+  start: {x: 2, y: 1}
+  goal: {x: 5, y: 7}
+  width: 10
+  height: 8
+  obstacleProbability: 0.2
 --- !u!4 &828878660
 Transform:
   m_ObjectHideFlags: 0
@@ -476,6 +477,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &828878661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828878658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f204054f4d3c9469f541ddbf65c74b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tester
+  interval: 5
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
